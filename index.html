@@ -12,12 +12,12 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
+            <img src="images/logo.jpg" class="logo">
             <ul>
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#Projects">Projects</a></li>
-                <li><a href="#Portfolio">Portfolio</a></li>
+                <li><a href="#Projects">Portfolio</a></li>
+                <li><a href="#Portfolio">Work</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -35,7 +35,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.jpg"  alt="user" style="width: 450px; height: 500px;">
+                <img src="images/user.jpg"  alt="user" style="width: 400px; height: 450px;">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title" >About Me</h1>
@@ -64,9 +64,11 @@
                 <div class="tab-contents" id="Experience">
                     <ul>
                         <li><span>Suzuki India Ltd - July 2020 to July 2022 </span> <br> Research and Development Engineer (Assistant Manager) </li>
-                        <li> Automated Tests for Engine testing with Data Acquisition and measured data analysis <br> Root cause analysis of Engine testing </li>
+                        <li> •	Automated Tests for Engine testing with Data Acquisition and measured data analysis <br> •	Root cause analysis of Engine testing<br>
+                         •	Performed Measured Data Analysis for debugging and automating new test algorithms in ECU and test frame via CAN and ETK. <br> •	Designed Jigs, fixtures, and spare parts in UGNX for the testing purpose and optimized equipment for better insulated testing.
+                        <br>•	Data Acquisition and root cause analysis by investigating test data in AVL PUMA, Concerto. <br> •	Validation of Components through a set of endurance, function, friction test cycles execution by identifying hardware critical parts. </li>
                         <li><span> Robic Rufarm PVT Ltd- June 2019 to July 2019 </span> <br> Design & Automation Intern </li>
-
+                        <li> •	Automated a length measuring machine by integration of pulleys, motors, VFD and rotary encoders. <br> •	Measured length by rotary encoders and calibrated to Arduino code to deliver tested products with budget cut by 40% for customer needs by benchmarking market specifications. Experience of working in small team(startup).<br>
                     </ul>
                 </div>
 
@@ -74,7 +76,7 @@
                     <ul>
                         
                         <li><span> Masters in Robotics at ASU : Aug 2022 - Current </span>  <br> CGPA 4.0/4.0 </li>
-                        <li><span> Bachelors in Mechanical Engineering at NIT Jalandhar : 2016 - 2020</span>  <br> CGPA 7.52/10 </li>
+                        <li><span> Bachelors in Mechanical Engineering at NIT Jalandhar :<br> 2016 - 2020</span>  <br> CGPA 7.52/10 </li>
                 
                     </ul>
                 </div>
@@ -92,26 +94,220 @@
         <div class="Project-list">
             <div>
                 <h2>Face Mask Detection</h2>
-                <p> Detection of Face mask using CNN and OAK D camera
-                    Use of Turtlebot4
+                <p style="line-height: 1.5;"> 
+                    • Real time Face Mask Detection using OAK-D camera feed of turtlebot4 by deploying Neural Networks. 
+                    <br> • Made our own Neural Network for the feature generation by taking training data of images from OAK-D camera
+                    <br> • From the custom NN model, We deployed model to ROS node which does face mask recognition in real time by subscribing to real time data current_frame.
+                    <br> • Used inbuilt software called MTCNN face detection algorithm for creation of the bounding box for faces which is also subscribing to real time data current_frame.
+                    <br> • published a custom topic /go/image from face mask recognition ROS node to MTCNN_vel_pub(fcae tracking) node which is subscriber to /go/image and publishes /cmd/vel.
+                    <br> • If the MTCNN_vel_det(face tracking) is being sent face without mask, it publishes velocity to move towards that face by using Face bounding box coordinates.
+
+                    
+                    <h10> VIDEO </h10> 
+                    <br>
+                    <video id="myVideo" src="images/mask.mp4" controls alt="mask" style="width: 800px; height: 500px;"></video>
                 </p>
-                <a href="#">Learn more</a>
+
+            <div class="learn-more">
+                <button class="learn-more-button"><h10> Learn more </h10></button>
+                <div class="additional-content">
+                    <p> <h10> OVERALL ROS GRAPH </h10> 
+                    <br>
+                    <img src="images/rosgraph_overall.png"  alt="user" style="width: 800px;">
+                    <br> 
+                    <h10> FLOW </h10> 
+                    <br>
+                    <img src="images/flow.png"  alt="user" style="width: 450px; height: 300px;">   
+                    <img src="images/Final_accuracy.png"  alt="user" style="width: 300px; height: 300px;">
+                    <br></p>
+                </div>
+            </div>
+                  
+            
             </div>
 
             <div>
                 <h2>Statistical Machine Learning</h2>
-                <p> Detection of Face mask using CNN and OAK D camera
-                    Use of Turtlebot4
+                <p style="line-height: 1.5;"> 
+                    •	Built Machine learning algorithms such as Linear regression, Logistic regression, K Means, Naive Bayes, Gaussian Distribution, Perceptron, SVM, decision trees, Adaboost, Gradient Boost, XG Boost, random forest, and Neural Networks from scratch.
+                    <br> •	Applied Lasso, sparse, Coordinate descent, Gradient descent, and Stochastic gradient descent from with different algorithm from base.
+                    <br> •	Induced Boosting technique for imbalanced dataset of Wi-Fi dataset, defected glass datasets for better F1-score of 0.85.
+                    <br> •	Compared F1 score, Accuracy, G means of Adaboost, Gradient Boosting and logistic regression performance on the datasets.
+                    <br> •	Implemented all ML algorithms on MNIST and CIFAR 10 dataset using the statistical approach without using Canny algorithms.
+
                 </p>
-                <a href="#">Learn more</a>
+
+                <div class="learn-more">
+                    <button class="learn-more-button"><h10> Learn more </h10></button>
+                    <div class="additional-content">
+                      <p style="line-height: 1.5;" > <h10> BIAS and VARIANCE </h10> 
+                        <br>
+                        Bias and Variance Classification and the Training and Testing error w.r.t iterations.
+                        <br style="margin-top: 50px;" >
+
+                        <img src="images/bias vs variance.png"  alt="user" style="width: 350px; height: 250px;">
+                        <img src="images/Training vs test error.png"  alt="user" style="width: 350px; height: 250px;">   
+                        <br>
+                        <p style="line-height: 1.5;" > <h10> GRADIENT DESCENT </h10> 
+                        <br>
+                        Gradient Descent with cost function and error.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/Cost function of Gradient descent.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/Error of Gradient Descent.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br>
+                        <p style="line-height: 1.5;" > <h10> STOCHIOSTIC GRADIENT DESCENT </h10> 
+                        <br>
+                        Stochoistic Gradient Descent with cost function and error with batch size of 1.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/Cost function of stochaistic gradient with batch size 1.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/Error function of stochaistic gradient with batch size 1.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br>
+                        Stochoistic Gradient Descent with cost function and error with batch size of 100.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/Cost function of stochaistic gradient with batch size 100.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/Error function of stochaistic gradient with batch size 100.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br>
+                        <p style="line-height: 1.5;" > <h10> Regualrization and K Means </h10> 
+                        <br>
+                        Regualrization of weights and K means for the number Classification.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/Regualrization w.r.t weights.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/k means.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br>
+                        <p style="line-height: 1.5;" > <h10> LASSO </h10> 
+                        <br>
+                        LASSO implementation and count of number of zeroes for sparse configuration.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/log count of zeros.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/count of zeros.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br>
+                        <p style="line-height: 1.5;" > <h10> RBF and Poly functions </h10> 
+                        <br>
+                        RBF and Poly Kernel which are combined functions of the radial individual functions.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/rbf.png"  alt="rbf" style="width: 350px; height: 300px;">
+                        <img src="images/poly.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br>
+                        <p style="line-height: 1.5;" > <h10> Bootstraping and K means for RBF and Poly functions </h10> 
+                        <br>
+                        RRBF and Poly kernel implementation with K fold and Bootstraping to increase number of samples.
+                        <br style="margin-top: 50px;" >
+                        <img src="images/poly vs rbf.png"  alt="user" style="width: 350px; height: 300px;">
+                    
+                        <img src="images/10 fold.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/bootstrap poly.png"  alt="user" style="width: 350px; height: 300px;">
+                        <img src="images/bootstrap rbf.png"  alt="user" style="width: 350px; height: 300px;">
+                        <br></p>
+                    </div>
+                  </div>
+
+                
+                <!---<a href="#">Learn more</a>---->
             </div>
 
             <div>
-                <h2>Robot Arm Navigation</h2>
-                <p> Detection of Face mask using CNN and OAK D camera
-                    Use of Turtlebot4
+                <h2>Turtlebot4 Applications</h2>
+                <p style="line-height: 1.5;"> 
+                    •	Experimented with computer vision techniques by creating dataset using stereo camera of turtlebot.
+                    <br> •	Collected IMU data and implemented Kalman filter and FIR filter for the velocity and acceleration prediction.
+                    <br> •	Implemented line follower using the computer vision thresholding, mapped surrounding environment using bot.
+
                 </p>
-                <a href="#">Learn more</a>
+                
+            </div>
+
+
+            <div>
+                <h2>Student Prediction Kaggle project:(Dataset of 60000 samples with 31 features)</h2>
+                <p style="line-height: 1.5;"> 
+                    •	Performed feature engineering and generated heat maps to find the best features to develop algorithm.
+                    <br> •	Implemented XG Boost, SVM, Neural Networks and Logistic regression to find the best F1 score of 0.71 on testing dataset.
+                    <br> •	Compared performance time and F1 score for the dataset and implemented hyper parameter tuning along with K means.
+
+                </p>
+
+                <div class="learn-more">
+                    <button class="learn-more-button"><h10> Learn more </h10></button>
+                    <div class="additional-content">
+                        <p> <h10> FEATURE ENGINEERING </h10> 
+                        <br>
+                        <img src="images/feature engineering.png"  alt="user" style="width: 800px;">
+                        <br> 
+                        <h10> CHECKING F1 SCORE AMONG METHODS </h10> 
+                        <br>
+                        <img src="images/results.png"  alt="user" style="width: 700px; height: 300px;">   
+                        
+                        <br></p>
+                    </div>
+                </div>
+                
+            </div>
+
+            <div>
+                <h2>Edge detection and panorama</h2>
+                <p style="line-height: 1.5;"> 
+
+                    •	Implemented Probability edge detection algorithm from scratch resulting better than canny and Sobel detectors.
+                    <br> •	Implemented Deep learning techniques along with Adam Algorithm for the better accuracy over the training dataset.
+                    <br> •	Detected corners using Harris corners and stitched images and created panorama of image using the concept of disparity.
+                    <br> •	Performed the tasks using the classical state of art and deep learning as well.                    
+
+                </p>
+                
+            </div>
+
+            <div>
+                <h2>Robot Navigation</h2>
+                <p style="line-height: 1.5;"> 
+
+                    •	Developed code for Robotic Arm navigation avoiding static obstacles using Inverse kinematics solutions and iterative loops.
+                    <br> •	Reviewed navigation of soft robotics by exploiting the contact with the environment by lumped mechanism.
+                    <br> •	Developed Algorithm for the optimization of waypoints for the better path exploiting obstacles than nominal path.
+                    
+                </p>
+                
+            </div>
+
+            <div>
+                <h2>Automation of Length Measuring Machine</h2>
+                <p style="line-height: 1.5;"> 
+
+                    •	Automated a length measuring machine by integration of pulleys, motors, gear train, VFD and rotary encoders.
+                    <br> •	Designed product in CATIA and fabricated prototype for testing with actual edge band tape product.
+                    <br> •	Measured length by rotary encoders and calibrated to Arduino to deliver tested prototype with budget cut by 40% for customer needs by benchmarking market product specifications for small scale industries.                
+                    
+                    
+                </p>
+                
+            </div>
+
+
+            <div>
+                <h2>BAJA SAE INDIA</h2>
+                <p style="line-height: 1.5;"> 
+                    •	Managed to develop timer by LDR and Laser setup for calculation of vehicle acceleration with the Arduino RS 232.
+                    <br> •	Simulated CVT in MATLAB for optimal acceleration by reducing lag of 0.5 sec and validated specifications of CVT for different terrains.
+                    <br> •	Implemented MATLAB code and technically validated flyweights and variables of CVT for different terrain by physical testing.
+                    <br> •	Designed and fabricated a gearbox, CVT, driveline of ATV using FEA analysis (Ansys) and decreased rotational weight by 20%.
+                    <br> •	Fabrication, assembly, and disassembly of powertrain components of ATV for 3 years and cut down collaborative service time by 30%.
+
+                </p>
+                
+            </div>
+
+
+            <div>
+                <h2>PUBLICATION</h2>
+                <p style="line-height: 1.5;"> 
+
+                    •	Performance evaluation of PV module integrated with PCM filled container with external fins for extremely hot climates.
+                    <br> •	Worked as Research Assistant and completed project which got published in Elsevier, ‘Journal of Energy Storage’.
+                    <br> •	Attached PCM along with fins on rear to a PV panel to mitigate the drop in power output by 6.59%.
+                    <br> •	Automated wiper system on PV panel for growth of efficacy by 10% using Arduino and case study of dust accumulation.
+                    
+                    
+                </p>
+                
             </div>
 
         </div>
@@ -125,44 +321,21 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/work-1.jpeg">
+                <img src="images/work-1.png">
                 <div class="layer">
-                    <h3>Social</h3>
-                    <p>The app 
-
+                    <h3>Face Mask Detection</h3>
+                        <a href="https://praveenpaidi.github.io/Robotics_Deployment/"> <i class="fa-solid fa-link"></i></a>   
                     </p>
-                </div>
-
-            </div>
-            <div class="work">
-                <img src="images/work-2.jpeg">
-                <div class="layer">
-                    <h3>Social</h3>
-                    <p>The app 
-
-                    </p>
-                </div>
-                
-            </div>
-            <div class="work">
-                <img src="images/work-3.jpeg">
-                <div class="layer">
-                    <h3>Social</h3>
-                    <p>The app 
-
-                    </p>
-                </div>
-                
-            </div>
+                </div>            
 
         </div>
-        <a href="#" class="btn" >See more </a>
+        <!--<a href="#" class="btn" >See more </a>-->
         
 
     </div>
 </div>
 
-<! --------------------contact------------->
+<!--------------------contact------------->
 <div id="contact">
     <div class="container">
         <div class="row">
@@ -170,10 +343,10 @@
                 <h1 class="sub-title">Contact Me</h1>
                 <p> <i class="fas fa-paper-plane"></i>praveenpaidi4@gmail.com</p>
                 <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/praveen-paidi-862591153/"></a><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://github.com/PraveenPaidi"></a><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/praveen-paidi-862591153/"> <i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/PraveenPaidi"> <i class="fa-brands fa-github"></i></a>
                 </div>
-                <a href="images/my-cv.pdf" download class ="btn btn2" > Download CV</a>
+                <a href="images/Praveen Paidi.pdf" download class ="btn btn2" > Download CV</a>
             
         </div>
         <div class="contact-right">
@@ -213,6 +386,36 @@
         .then(response => console.log('Success!', response))
         .catch(error => console.error('Error!', error.message))
     })
+</script>
+
+<script>
+    var video = document.getElementById("myVideo");
+
+    video.addEventListener("mouseenter", function() {
+        video.play();
+    });
+
+    video.addEventListener("mouseleave", function() {
+        video.pause();
+        video.currentTime = 0;
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var learnMoreButtons = document.querySelectorAll(".learn-more-button");
+  
+      learnMoreButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+          var learnMoreDiv = this.parentNode;
+          learnMoreDiv.classList.toggle("open");
+        });
+      });
+    });
   </script>
+  
+  
+
+  
 </body>
 </html>
