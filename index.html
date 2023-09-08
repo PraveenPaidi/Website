@@ -37,11 +37,12 @@
                 <img src="images/user.jpg"  alt="user" style="width: 400px; height: 450px;">
             </div>
             <div class="about-col-2">
-                <h1 class="sub-title" >About Me</h1>
-                <p> I'm pursuing Masters in Robotics and Autonomus Systems at Arizona State University. I did my bachelors in 
-                    Mechanical Engineering from National Institute of Technology Jalandhar, India.I have experience of 
-                    2 years as Research and Development Engineer at Suzuki India Ltd.Currently I'm looking 
-                    for Internship opportunities and Full time opportunities.</p>
+                <h1 class="sub-title" >About me</h1>
+
+                <p> I'm pursuing Masters in Robotics and Autonomus Systems at Arizona State University.My current coursework is interdiscplinary. 
+                    I completed my bachelors in Mechanical Engineering from National Institute of Technology Jalandhar, India.I have 2 years full-time
+                    experience as Research and Development Engineer at Suzuki India Ltd.I have internship experience as Automation Engineer at Robic Rufarm.
+                    Currently I'm looking for Internship opportunities and Full time opportunities. </p>
 
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
@@ -63,7 +64,7 @@
                 <div class="tab-contents" id="Experience">
                     <ul>
                         <li><span>Research Volunteer - Apr 2023 to Current </span> <br> Arizona State University </li>
-                        <li> •	Implemented Probability edge detection algorithm from scratch resulting better than canny and Sobel detectors.<br>
+                        <li>•	Implemented Probability edge detection algorithm from scratch resulting better than canny and Sobel detectors.<br>
                             •	Detected corners using Harris corners and stitched images and created panorama of image using homography and perspective transform.<br>
                             •	Used Neural Radiance fields (NeRF) to synthesize novel views by optimizing a continuous volumetric scene function using a sparse set.<br>
                             •	Reconstructed 3D scene using Sfm(Structure from motion) with different viewpoints using state of art classical approach.<br>
@@ -107,14 +108,7 @@
                 <p style="line-height: 1.5;"> 
                     • Real time Face Mask Detection using OAK-D camera feed of turtlebot4 by deploying Neural Networks. 
                     <br> • Made our own Neural Network for the feature generation by taking training data of images from OAK-D camera
-                    <br> • From the custom NN model, We deployed model to ROS node which does face mask recognition in real time by subscribing to real time data current_frame.
-                    <br> • Used inbuilt software called MTCNN face detection algorithm for creation of the bounding box for faces which is also subscribing to real time data current_frame.
-                    <br> • published a custom topic /go/image from face mask recognition ROS node to MTCNN_vel_pub(fcae tracking) node which is subscriber to /go/image and publishes /cmd/vel.
-                    <br> • If the MTCNN_vel_det(face tracking) is being sent face without mask, it publishes velocity to move towards that face by using Face bounding box coordinates.
-
-                    
-                    <h10> VIDEO </h10> 
-                    <br>
+                    <br> • Deployed model to ROS node which does face mask recognition in real time by subscribing to real time data current_frame.
                     <video id="myVideo" src="images/mask.mp4" controls alt="mask" style="width: 800px; height: 500px;"></video>
                 </p>
 
